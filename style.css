@@ -1,3 +1,4 @@
+/* page setup */
 :root{
     --bg-color: #0d101b;
     --panel: #6b2341;
@@ -17,6 +18,7 @@ body{
     flex-wrap: wrap;
     padding: 8px;
 }
+/* container setup */
 .container{
     flex-shrink: 0;
     display: flex;
@@ -29,7 +31,7 @@ body{
     width: 100%;
     gap: 8px;
 }
-/* Heaer styles */
+/* Header styles */
 header{
     align-items: center;
 }
@@ -87,12 +89,19 @@ button:active{
     background-color: rgba(255, 255, 255, .2);
 }
 /* Hero styles */
+.hero{
+    align-items: center;
+    flex-direction: row;
+}
 .text{
     order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }
 .visual{
-    width: 200px;
-    flex: 1 1 200px;
+    flex: 1 1 400px;
+    align-self: stretch;
     background: radial-gradient( var(--card), var(--bg-color));
     border-radius: 8px;
     order: 1;
@@ -100,14 +109,14 @@ button:active{
 /* sidebar styles */
 .sidebar{
     flex-direction: column;
-    flex: 1 1 200px;
+    flex: 0 0 250px;
     align-self: stretch;
     align-items: flex-start;
 }
 /* article styles */
 .content{
     flex-direction: column;
-    flex: 4 1 500px;
+    flex: 1;
 }
 /* card styles */
 .holder{
@@ -117,6 +126,7 @@ button:active{
     border: 2px dotted rgba(0, 0, 0, .25);
     padding: 8px;
     border-radius: 8px;
+    align-content: space-evenly;
 }
 .card{
     background-color: var(--card);
@@ -131,9 +141,16 @@ button:active{
     padding: 8px;
     border: 2px dotted var(--bg-color);
 }
+#card1{
+    align-self: flex-start;
+}
 /* call to action bar */
 #action{
     align-items: center;
+}
+.buttons{
+    flex-grow: 0;
+
 }
 /* footer styles */
 .footer-list{
@@ -142,6 +159,9 @@ button:active{
     gap: 8px;
     margin-bottom: 8px;
 }
+#list1{
+    flex-shrink: 0;
+}
 footer div{
-    flex: 1 1 0;
+    flex: 1;
 }
